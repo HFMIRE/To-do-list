@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-04-15T14:59:35.905Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36" etag="1frdGXROVyEFLbLAzTbF" version="14.6.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-15T15:02:24.271Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36" etag="mI8Isoik_chHSs1cfkV2" version="14.6.0" type="github">
   <diagram name="Page-1" id="9f46799a-70d6-7492-0946-bef42562c5a5">
-    <mxGraphModel dx="1298" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -94,9 +94,10 @@
         <mxCell id="qly2oaImNDmmxGQCqygD-6" value="Task belongs to user&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="630" y="500" width="160" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="qly2oaImNDmmxGQCqygD-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="qly2oaImNDmmxGQCqygD-8">
+        <mxCell id="qly2oaImNDmmxGQCqygD-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="470" y="400" as="targetPoint" />
+            <mxPoint x="290" y="490" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="qly2oaImNDmmxGQCqygD-8" value="Board has many user&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
