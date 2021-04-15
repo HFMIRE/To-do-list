@@ -1,19 +1,20 @@
 # To-do-list
-A to do list. 
+
+A to do list.
 
 Functional requirements
 
-A task must start in the 'todo' state. 
+A task must start in the 'todo' state.
 
-A project board must have at least 3 areas - todo, in progress, done. 
+A project board must have at least 3 areas - todo, in progress, done.
 
-It must be possible to view all the tasks on a project board. 
+It must be possible to view all the tasks on a project board.
 
-It must be possible to create a task on a project board. 
+It must be possible to create a task on a project board.
 
-It must be possible to delete a task on a project board. 
+It must be possible to delete a task on a project board.
 
-It must be possible to edit a task on a project board. 
+It must be possible to edit a task on a project board.
 
 A task must have textual description.
 
@@ -33,13 +34,9 @@ The state of a project board must persist even when the application is closed.
 
 :new: The application must work well on a mobile as well as a desktop.
 
-
-
-
-
 Non-functional requirements (the constraints on the system)
 
-The application must provide evidence of conformance to the WCAG accessibility standards. 
+The application must provide evidence of conformance to the WCAG accessibility standards.
 
 The application must have client & server-side validation in place.
 
@@ -55,7 +52,7 @@ The application code must be stored in a GitHub repository,
 
 There must be documentation which describes:
 
-Other features:
+Overall attrbutes:
 how to run the application.
 
 features of the application.
@@ -69,4 +66,3 @@ links to UI wireframes.
 links to unit test coverage report.
 
 links to system test coverage report.
-
