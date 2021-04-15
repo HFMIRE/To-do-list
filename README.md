@@ -19,7 +19,7 @@ A to do list.
 - The state of a project board must persist even when the application is closed.
 - :new: The application must work well on a mobile as well as a desktop.
 
-##Non-functional requirements (the constraints on the system)
+## Non-functional requirements (the constraints on the system)
 
 - The application must provide evidence of conformance to the WCAG accessibility standards.
 - The application must have client & server-side validation in place.
