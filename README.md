@@ -27,7 +27,7 @@ A to do list.
 - The application must have evidence of automated unit testing.
 - The application must have evidence of automated system testing.
 - The application code must be documented in a manner that it would be easy for a new developer to understand.
-- The application code must be stored in a GitHub repository,
+- The application code must be stored in a GitHub repository.
 - There must be documentation which describes:
 
 ## Other features:
