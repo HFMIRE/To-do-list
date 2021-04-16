@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+Board --|{ User : Belongs to <
+Board --|{ Task : Belongs to <
+Task .. User : Optional: Assigned to >
+
+
+
+class Board {
+name : String
+create()
+update()
+delete()
+}
+
+class User {
+name : String
+avatar : Link
+create()
+update()
+delete()
+}
+
+class Task {
+name : String
+created at : Date
+assigned to : User
+description : String
+create()
+update()
+delete()
+assign_to_user()
+}
+
+@enduml

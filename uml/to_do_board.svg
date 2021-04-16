@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1509.2px" preserveAspectRatio="none" style="width:767px;height:1509px;" version="1.1" viewBox="0 0 767 1509" width="767.2px" zoomAndPan="magnify"><defs><filter height="300%" id="fr2s7zml3saql" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="5.599999999999999"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="11.199999999999998" dy="11.199999999999998" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[9563755d011c5cec7ec66dc53565a59e]
+class Board--><rect codeLine="10" fill="#FEFECE" filter="url(#fr2s7zml3saql)" height="279.4969" id="Board" style="stroke:#A80036;stroke-width:4.199999999999999;" width="229.6" x="98" y="19.6"/><ellipse cx="160.16" cy="64.4" fill="#ADD1B2" rx="30.8" ry="30.8" style="stroke:#A80036;stroke-width:2.7999999999999994;"/><path d="M167.0848,81.6006 Q165.4579,82.4373 163.6682,82.8557 Q161.8786,83.274 159.903,83.274 Q152.8838,83.274 149.1883,78.6488 Q145.4928,74.0236 145.4928,65.2846 Q145.4928,56.5223 149.1883,51.8971 Q152.8838,47.2719 159.903,47.2719 Q161.8786,47.2719 163.6914,47.6902 Q165.5043,48.1086 167.0848,48.9453 L167.0848,56.5687 Q165.3184,54.9418 163.6566,54.1864 Q161.9948,53.4311 160.2284,53.4311 Q156.4631,53.4311 154.5456,56.4177 Q152.6282,59.4043 152.6282,65.2846 Q152.6282,71.1416 154.5456,74.1282 Q156.4631,77.1148 160.2284,77.1148 Q161.9948,77.1148 163.6566,76.3595 Q165.3184,75.6041 167.0848,73.9771 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="33.6" lengthAdjust="spacing" textLength="95.2" x="203.84" y="77.0984">Board</text><line style="stroke:#A80036;stroke-width:4.199999999999999;" x1="100.8" x2="324.8" y1="109.2" y2="109.2"/><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="196" x="114.8" y="150.1773">name : String</text><line style="stroke:#A80036;stroke-width:4.199999999999999;" x1="100.8" x2="324.8" y1="167.8742" y2="167.8742"/><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="114.8" x="114.8" y="208.8516">create()</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="126" x="114.8" y="245.1258">update()</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="112" x="114.8" y="281.4">delete()</text><!--MD5=[3fd616f346a44cd59a91eb10b19e157c]
+class User--><rect codeLine="17" fill="#FEFECE" filter="url(#fr2s7zml3saql)" height="315.7711" id="User" style="stroke:#A80036;stroke-width:4.199999999999999;" width="229.6" x="19.6" y="1156.4"/><ellipse cx="91.84" cy="1201.2" fill="#ADD1B2" rx="30.8" ry="30.8" style="stroke:#A80036;stroke-width:2.7999999999999994;"/><path d="M98.7648,1218.4006 Q97.1379,1219.2373 95.3482,1219.6557 Q93.5586,1220.074 91.583,1220.074 Q84.5638,1220.074 80.8683,1215.4488 Q77.1728,1210.8236 77.1728,1202.0846 Q77.1728,1193.3223 80.8683,1188.6971 Q84.5638,1184.0719 91.583,1184.0719 Q93.5586,1184.0719 95.3714,1184.4902 Q97.1843,1184.9086 98.7648,1185.7453 L98.7648,1193.3687 Q96.9984,1191.7418 95.3366,1190.9864 Q93.6748,1190.2311 91.9084,1190.2311 Q88.1431,1190.2311 86.2256,1193.2177 Q84.3082,1196.2043 84.3082,1202.0846 Q84.3082,1207.9416 86.2256,1210.9282 Q88.1431,1213.9148 91.9084,1213.9148 Q93.6748,1213.9148 95.3366,1213.1595 Q96.9984,1212.4041 98.7648,1210.7771 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="33.6" lengthAdjust="spacing" textLength="72.8" x="137.76" y="1213.8984">User</text><line style="stroke:#A80036;stroke-width:4.199999999999999;" x1="22.4" x2="246.4" y1="1246" y2="1246"/><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="196" x="36.4" y="1286.9773">name : String</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="179.2" x="36.4" y="1323.2516">avatar : Link</text><line style="stroke:#A80036;stroke-width:4.199999999999999;" x1="22.4" x2="246.4" y1="1340.9484" y2="1340.9484"/><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="114.8" x="36.4" y="1381.9258">create()</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="126" x="36.4" y="1418.2">update()</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="112" x="36.4" y="1454.4742">delete()</text><!--MD5=[b34797a66dc35cbf1d65f7e3ca75530e]
+class Task--><rect codeLine="25" fill="#FEFECE" filter="url(#fr2s7zml3saql)" height="424.5937" id="Task" style="stroke:#A80036;stroke-width:4.199999999999999;" width="319.2" x="378" y="515.2"/><ellipse cx="488.04" cy="560" fill="#ADD1B2" rx="30.8" ry="30.8" style="stroke:#A80036;stroke-width:2.7999999999999994;"/><path d="M494.9648,577.2006 Q493.3379,578.0373 491.5482,578.4557 Q489.7586,578.874 487.783,578.874 Q480.7638,578.874 477.0683,574.2488 Q473.3728,569.6236 473.3728,560.8846 Q473.3728,552.1223 477.0683,547.4971 Q480.7638,542.8719 487.783,542.8719 Q489.7586,542.8719 491.5714,543.2902 Q493.3843,543.7086 494.9648,544.5453 L494.9648,552.1687 Q493.1984,550.5418 491.5366,549.7864 Q489.8748,549.0311 488.1084,549.0311 Q484.3431,549.0311 482.4256,552.0177 Q480.5082,555.0043 480.5082,560.8846 Q480.5082,566.7416 482.4256,569.7282 Q484.3431,572.7148 488.1084,572.7148 Q489.8748,572.7148 491.5366,571.9595 Q493.1984,571.2041 494.9648,569.5771 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="33.6" lengthAdjust="spacing" textLength="78.4" x="542.36" y="572.6984">Task</text><line style="stroke:#A80036;stroke-width:4.199999999999999;" x1="380.8" x2="694.4" y1="604.8" y2="604.8"/><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="196" x="394.8" y="645.7773">name : String</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="240.8" x="394.8" y="682.0516">created at : Date</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="268.8" x="394.8" y="718.3258">assigned to : User</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="285.6" x="394.8" y="754.6">description : String</text><line style="stroke:#A80036;stroke-width:4.199999999999999;" x1="380.8" x2="694.4" y1="772.2969" y2="772.2969"/><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="114.8" x="394.8" y="813.2742">create()</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="126" x="394.8" y="849.5484">update()</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="112" x="394.8" y="885.8227">delete()</text><text fill="#000000" font-family="sans-serif" font-size="30.8" lengthAdjust="spacing" textLength="252" x="394.8" y="922.0969">assign_to_user()</text><!--MD5=[f5a5fb38a491afdb60656b0cb210e8f1]
+link Board to User--><path codeLine="4" d="M159.656,300.076 C137.592,364.392 114.576,442.624 103.6,515.2 C71.736,725.956 89.348,971.432 108.444,1133.58 " fill="none" id="Board-to-User" style="stroke:#A80036;stroke-width:2.7999999999999994;"/><line style="stroke:#A80036;stroke-width:2.7999999999999994;" x1="108.4801" x2="127.8393" y1="1133.6569" y2="1153.8861"/><line style="stroke:#A80036;stroke-width:2.7999999999999994;" x1="108.4801" x2="94.4807" y1="1133.6569" y2="1157.9059"/><line style="stroke:#A80036;stroke-width:2.7999999999999994;" x1="108.4801" x2="111.16" y1="1133.6569" y2="1155.896"/><line style="stroke:#A80036;stroke-width:2.7999999999999994;" x1="118.9297" x2="96.6906" y1="1126.7572" y2="1129.4371"/><polygon fill="#000000" points="118.4586,714.4611,108.6919,739.235,125.1189,740.2443,118.4586,714.4611" style="stroke:#000000;stroke-width:2.7999999999999994;"/><text fill="#000000" font-family="sans-serif" font-size="36.4" lengthAdjust="spacing" textLength="184.8" x="142.8" y="742.1914">Belongs to</text><!--MD5=[9cafe07b1d2a1fbad6256466d7472014]
+link Board to Task--><path codeLine="5" d="M292.264,300.076 C326.088,358.708 366.52,428.736 404.684,494.872 " fill="none" id="Board-to-Task" style="stroke:#A80036;stroke-width:2.7999999999999994;"/><line style="stroke:#A80036;stroke-width:2.7999999999999994;" x1="404.7124" x2="430.4614" y1="494.9328" y2="505.9323"/><line style="stroke:#A80036;stroke-width:2.7999999999999994;" x1="404.7124" x2="401.3626" y1="494.9328" y2="522.7317"/><line style="stroke:#A80036;stroke-width:2.7999999999999994;" x1="404.7124" x2="415.912" y1="494.9328" y2="514.332"/><line style="stroke:#A80036;stroke-width:2.7999999999999994;" x1="411.6122" x2="392.2129" y1="484.4832" y2="495.6827"/><polygon fill="#000000" points="371.0021,395.7092,376.5342,421.7578,390.7886,413.5313,371.0021,395.7092" style="stroke:#000000;stroke-width:2.7999999999999994;"/><text fill="#000000" font-family="sans-serif" font-size="36.4" lengthAdjust="spacing" textLength="184.8" x="403.2" y="421.5914">Belongs to</text><!--MD5=[59f436a63fd120c4f40f9b73b6fc58b5]
+link Task to User--><path codeLine="6" d="M391.468,941.388 C342.328,1012.172 288.428,1089.844 242.732,1155.672 " fill="none" id="Task-User" style="stroke:#A80036;stroke-width:2.7999999999999994;stroke-dasharray:7.0,7.0;"/><polygon fill="#000000" points="328.0171,1060.5358,349.2184,1044.4225,335.6982,1035.038,328.0171,1060.5358" style="stroke:#000000;stroke-width:2.7999999999999994;"/><text fill="#000000" font-family="sans-serif" font-size="36.4" lengthAdjust="spacing" textLength="383.6" x="361.2" y="1062.7914">Optional: Assigned to</text><!--MD5=[a19f0afb9201118eb5dca4ceeab00fc1]
+@startuml
+'https://plantuml.com/class-diagram
+
+
+Board - -|{ User : Belongs to <
+Board - -|{ Task : Belongs to <
+Task .. User : Optional: Assigned to >
+
+
+
+class Board {
+name : String
+create()
+update()
+delete()
+}
+
+class User {
+name : String
+avatar : Link
+create()
+update()
+delete()
+}
+
+class Task {
+name : String
+created at : Date
+assigned to : User
+description : String
+create()
+update()
+delete()
+assign_to_user()
+}
+
+@enduml
+
+@startuml
+
+
+Board - -|{ User : Belongs to <
+Board - -|{ Task : Belongs to <
+Task .. User : Optional: Assigned to >
+
+
+
+class Board {
+name : String
+create()
+update()
+delete()
+}
+
+class User {
+name : String
+avatar : Link
+create()
+update()
+delete()
+}
+
+class Task {
+name : String
+created at : Date
+assigned to : User
+description : String
+create()
+update()
+delete()
+assign_to_user()
+}
+
+@enduml
+
+PlantUML version 1.2021.4(Sun Apr 04 09:49:39 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: GB
+--></g></svg>
