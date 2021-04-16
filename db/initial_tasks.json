@@ -1,0 +1,40 @@
+[
+    {
+        "name": "First Board",
+        "tasks": [
+            {
+                "name": "First Task",
+                "Description": "First Task Description"
+            },
+            {
+                "name": "Second Task",
+                "Description": "Second Task Description"
+            }
+        ],
+        "users": [
+            {
+                "name": "Sam Townsend",
+                "avatar": "https://media-exp1.licdn.com/dms/image/C4D03AQGrm2Xm88EcMA/profile-displayphoto-shrink_200_200/0/1539938539311?e=1623888000&v=beta&t=0BN5VGh7ytYBkS9fYgYrQRte1UjAMqyBrw-SypQWsVk"
+            }
+        ]
+    },
+    {
+        "name": "Second Board",
+        "tasks": [
+            {
+                "name": "First Task on Second Board",
+                "Description": "First Task on Second Board Description"
+            },
+            {
+                "name": "Second Task on Second Board",
+                "Description": "Second Task on Second Board Description"
+            }
+        ],
+        "users": [
+            {
+                "name": "Sam Townsend",
+                "avatar": "https://media-exp1.licdn.com/dms/image/C4D03AQGrm2Xm88EcMA/profile-displayphoto-shrink_200_200/0/1539938539311?e=1623888000&v=beta&t=0BN5VGh7ytYBkS9fYgYrQRte1UjAMqyBrw-SypQWsVk"
+            }
+        ]
+    }
+]
