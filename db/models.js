@@ -1,6 +1,6 @@
 const {sequelize, DataTypes, Model} = require('./db');
 
-const options = {sequelize, timestamps: false};
+const options = {sequelize};
 
 class Board extends Model {
 
@@ -31,9 +31,18 @@ User.init({
 }, options);
 
 
+
+// Board to task relationship
 Board.hasMany(Task, {as: 'tasks', foreignKey: 'BoardId'})
 Task.belongsTo(Board, {foreignKey: 'BoardId'})
-Board.hasMany(User, {as: 'users', foreignKey: 'BoardId'});
-User.belongsTo(Board, {foreignKey: 'BoardId'});
+// Board to user relationship
+UserBoards = sequelize.define('UserBoards', {})
+Board.belongsToMany(User, {through: UserBoards});
+User.belongsToMany(Board, {through: UserBoards})
+// Task to user relationship
+UserTasks = sequelize.define('UserTasks', {})
+Task.belongsToMany(User, {through: UserTasks});
+User.belongsToMany(Task, {through: UserTasks})
+
 
 module.exports = {Board, Task, User};

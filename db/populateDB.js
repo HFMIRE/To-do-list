@@ -33,8 +33,9 @@ async function populateDB() {
                 name: userData.name,
                 avatar: userData.avatar
             });
-            await board.addUser(user);
+            await board.addUser([user]);
         }
+
     }
 }
 
