@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "handlebars": "^4.7.7",
+    "jest": "^26.6.3",
+    "node": "^15.14.0",
+    "sequelize": "^6.6.2",
+    "sqlite": "^4.0.21",
+    "sqlite3": "^5.0.2"
+  },
+  "name": "to-do-list",
+  "description": "A to do list.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HFMIRE/To-do-list.git"
+  },
+  "author": "evolve team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HFMIRE/To-do-list/issues"
+  },
+  "homepage": "https://github.com/HFMIRE/To-do-list#readme"
+}
