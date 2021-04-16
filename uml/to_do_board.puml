@@ -4,7 +4,7 @@
 
 Board --|{ User : Belongs to <
 Board --|{ Task : Belongs to <
-Task -- User : Assigned to >
+Task .. User : Optional: Assigned to >
 
 
 
@@ -31,6 +31,7 @@ description : String
 create()
 update()
 delete()
+assign_to_user()
 }
 
 @enduml
