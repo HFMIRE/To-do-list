@@ -34,10 +34,11 @@ app.get("/board/:id", async (req, res) => {
   res.render("board", { board, boardId });
 });
 
-//creating a new routes - task
-app.get("/task", async (req, res) => {
-  res.render("task");
+//creating a new routes - addtask
+app.get("/addtask", async (req, res) => {
+  res.render("addtask");
 });
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
+

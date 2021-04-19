@@ -1,25 +1,49 @@
 <div class="board">
 
-{{#each board}}
-<div class="card">
-  <div class="card-header">To-do</div>
+  <div class="container">
 
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
-    <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
-    <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
-  </ul>
+  <div class="card" >
+    <div class="card-header">
+      TO-DO
+      {{#each board}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
+      <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
+      <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
+    </ul>
+
+  </div>
+
+       <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <a href="/addtask"><button type="button" class="btn btn-success">Add</button></a>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </div>
+      {{/each}}
+  </div>
+
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <a href="/views/task.handlebars"><button type="button" class="btn btn-success">Add</button></a>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </div>
+      
+  </div>
+
+
+  <div class="container">
+
+  <div class="card" >
+    <div class="card-header">COMPLETED</div>
+  </div>
+
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <a href="/views/task.handlebars"><button type="button" class="btn btn-success">Add</button></a>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </div>
+      
+  </div>
 
 </div>
-{{/each}}
-
-  <a class="btn btn-primary" href="/task" role="button">Add</a>
-  <a class="btn btn-primary" href="#" role="button">Delete</a>
-  
-</div>
-
-
-
 
 
 
