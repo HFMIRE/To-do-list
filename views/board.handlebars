@@ -1,40 +1,24 @@
-<section>
-  {{#each board}}
-<div class="card" style="width: 18rem;">
-  <div class="card-header">
-    To-do
-  </div>
+<div class="board">
+
+{{#each board}}
+<div class="card">
+  <div class="card-header">To-do</div>
+
   <ul class="list-group list-group-flush">
     <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
     <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
     <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
   </ul>
+
 </div>
-  {{/each}}
-  <div class="card" style="width: 18rem;">
-  <div class="card-header">
-    In progress
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item draggable" draggable="true">An item</li>
-    <li class="list-group-item draggable" draggable="true">A second item</li>
-    <li class="list-group-item draggable" draggable="true">A third item</li>
-  </ul>
-</div>
-  <div class="card" style="width: 18rem;">
-  <div class="card-header">
-    Done
-  </div>
-  <ul class="list-group list-group-flush" >
-    <li class="list-group-item draggable" draggable="true">An item</li>
-    <li class="list-group-item draggable" draggable="true">A second item</li>
-    <li class="list-group-item draggable" draggable="true">A third item</li>
-  </ul>
-</div>
+{{/each}}
 
   <a class="btn btn-primary" href="/task" role="button">Add</a>
-    <a class="btn btn-primary" href="#" role="button">Delete</a>
-</section>
+  <a class="btn btn-primary" href="#" role="button">Delete</a>
+  
+</div>
+
+
 
 
 
