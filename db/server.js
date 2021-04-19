@@ -11,11 +11,13 @@ const handlebars = expressHandlebars({
 });
 const { Board, Task, User } = require("./models");
 const { sequelize, DataTypes, Model } = require("./db");
+const moment = require("moment");
 
 app.engine("handlebars", handlebars);
 app.set("view engine", "handlebars");
-
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // connected to the all boards landing page
 app.get("/", async (req, res) => {
@@ -23,12 +25,19 @@ app.get("/", async (req, res) => {
   res.render("allboards", { board });
 });
 
-// //conncting 2 page
-// app.get("/allboards/:id", async (req, res) => {
-//   const board = await Board.findByPk(req.params.id);
-//   const task = await Board.findAll({});
-//   res.render("board", { board, task });
-// });
+app.get("/board/:id", async (req, res) => {
+  const boardId = await Board.findByPk(req.params.id);
+  const board = await Board.findAll({
+    include: [{ model: Task, as: "tasks" }],
+    nest: true,
+  });
+  res.render("board", { board, boardId });
+});
+
+//creating a new routes - addtask
+app.get("/addtask", async (req, res) => {
+  res.render("addtask");
+});
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
