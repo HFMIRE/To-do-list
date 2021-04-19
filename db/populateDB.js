@@ -24,7 +24,8 @@ async function populateDB() {
         for (const taskData of boardData.tasks) {
             const task = await Task.create({
                 name: taskData.name,
-                description: taskData.description
+                description: taskData.description,
+                status: taskData.status,
             });
             await board.addTask(task);
         }
