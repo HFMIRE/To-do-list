@@ -1,6 +1,7 @@
 [
     {
         "name": "First Board",
+        "title": "TO DO",
         "tasks": [
             {
                 "name": "First Task",

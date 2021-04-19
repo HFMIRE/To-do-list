@@ -20,7 +20,7 @@ app.use(express.static("public"));
 // connected to the all boards landing page
 app.get("/", async (req, res) => {
   const board = await Board.findAll({});
-  res.render("allboards", { board });
+  res.render("board", { board });
 });
 
 // //conncting 2 page

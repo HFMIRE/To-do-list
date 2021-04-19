@@ -1,10 +1,11 @@
 <h1>All Boards</h1>
 <section>
     {{#each board}}
+    <h1>{{this.title}}</h1>
         <article>
             <header></header>
-            <h1>{{this.name}}</h1>
-           <h4>{{this.createdAt}}</h4>
+            <h2>{{this.name}}</h2>
+            <h4>{{this.createdAt}}</h4>
             <h4>{{this.updatedAt}}</h4>
         </article>
     {{/each}}
