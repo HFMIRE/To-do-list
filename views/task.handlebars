@@ -1,4 +1,4 @@
-<div class="card mx-auto" style="width: 18rem;">
+{{!-- <div class="card mx-auto" style="width: 18rem;">
     <div class="card-header" id="cardHeader">
       Task
     </div>
@@ -9,4 +9,28 @@
       <li class="list-group-item"><span class="card-ref">Assigned to: </li>
     </ul> 
     <button type="button" class="btn btn-info" job="delete">Remove</button>                  
+</div> --}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+     <form>
+        <div class="column">
+            <label for="fname">Name:</label><br>
+            <input type="text" class="form-control" placeholder="John" id="name">
+           
+            <label for="fname">Created at:</label><br>
+            <input type="date" class="form-control" id="date">
+          
+            <label for="assigned">Assigned To:</label><br>
+            <input type="text" class="form-control" placeholder="Sarah" id="assignedTo">
+
+            <label for="description">Description:</label><br>
+            <input type="textarea" class="form-control" placeholder="Fix bugs with code" id="description">
+
+        </div>
+         <button type="button" class="btn btn-primary" id="btnAdd">Add</button>
+     </form>
+    </div>
+  </div>
 </div>
