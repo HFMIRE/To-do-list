@@ -4,11 +4,13 @@
         "tasks": [
             {
                 "name": "First Task",
-                "Description": "First Task Description"
+                "Description": "First Task Description",
+                "status": "Done"
             },
             {
                 "name": "Second Task",
-                "Description": "Second Task Description"
+                "Description": "Second Task Description",
+                "status": "To Do"
             }
         ],
         "users": [
@@ -23,11 +25,13 @@
         "tasks": [
             {
                 "name": "First Task on Second Board",
-                "Description": "First Task on Second Board Description"
+                "Description": "First Task on Second Board Description",
+                "status": "In Progress"
             },
             {
                 "name": "Second Task on Second Board",
-                "Description": "Second Task on Second Board Description"
+                "Description": "Second Task on Second Board Description",
+                "status": "To Do"
             }
         ],
         "users": [
