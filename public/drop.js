@@ -33,26 +33,4 @@ function getDragAfterElement(card, y) {
     }, { offset: Number.NEGATIVE_INFINITY }).element
 }
 
-getTasks: async (state) => {
-    state.tasks = await fetch('/tasks').then(res => res.json())
-    return state
-}
 
-add: (state, form) => {
-    const data = new FormData(form)
-    const task = {
-        id: window.crypto.getRandomValues(new Uint8Array(2)).join(''),
-        text: data.get('text'),
-        highlight: '',
-        status: 0
-    }
-    const postRequest = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(task)
-    }
-    fetch('/tasks', postRequest).then(() => app.run('getTasks'))
-    return state
-};
