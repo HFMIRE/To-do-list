@@ -5,11 +5,13 @@
   <div class="card" >
     <div class="card-header">
       TO-DO
+      {{#each board}}
+      {{this.id}}
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item draggable" draggable="true">Fix bugs</li>
-      <li class="list-group-item draggable" draggable="true">Peer review</li>
-      <li class="list-group-item draggable" draggable="true">Attend meeting</li>
+      <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
+      <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
+      <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
     </ul>
 
   </div>
@@ -18,13 +20,7 @@
         <a href="/views/task.handlebars"><button type="button" class="btn btn-success">Add</button></a>
         <button type="button" class="btn btn-danger">Delete</button>
       </div>
-
-  </div>
-
-  <div class="container">
-
-  <div class="card" >
-    <div class="card-header">IN PROGRESS</div>
+      {{/each}}
   </div>
 
       <div class="btn-group" role="group" aria-label="Basic mixed styles example">
