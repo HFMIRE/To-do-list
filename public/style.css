@@ -1,0 +1,25 @@
+.board {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 20px;
+}
+
+.card-header{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.card{
+    margin: 10px;
+    width: 18rem;
+}
+
+body {
+    margin: 0;
+}
+
+.btn-group{
+    margin: 10px;
+    width: 18rem;
+}
