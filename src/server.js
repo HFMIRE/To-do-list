@@ -27,7 +27,7 @@ app.get("/", async (req, res) => {
   // }
   res.render("allboards", { board });
 });
-
+// creating new route and importing task into board
 app.get("/board/:id", async (req, res) => {
   const board = await Board.findByPk(req.params.id);
   const tasks = await board.getTasks();
