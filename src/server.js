@@ -9,8 +9,8 @@ const {
 const handlebars = expressHandlebars({
   handlebars: allowInsecurePrototypeAccess(Handlebars),
 });
-const { Board, Task, User } = require("./models");
-const { sequelize, DataTypes, Model } = require("./db");
+const { Board, Task, User } = require("../db/models");
+const { sequelize, DataTypes, Model } = require("../db/db");
 const moment = require("moment");
 
 app.engine("handlebars", handlebars);
@@ -26,12 +26,10 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/board/:id", async (req, res) => {
-  const boardId = await Board.findByPk(req.params.id);
-  const board = await Board.findAll({
-    include: [{ model: Task, as: "tasks" }],
-    nest: true,
-  });
-  res.render("board", { board, boardId });
+  const board = await Board.findByPk(req.params.id);
+  const tasks = await board.getTasks();
+
+  res.render("board", { board, tasks });
 });
 
 //creating a new routes - task

@@ -1,21 +1,14 @@
 <div class="board">
-
-{{#each board}}
-<div class="card">
-  <div class="card-header">To-do</div>
-
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
-    <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
-    <li class="list-group-item draggable" draggable="true">{{this.name}}</li>
-  </ul>
-
-</div>
-{{/each}}
-
+  <div class="card">
+    <div class="card-header">To-do</div>
+    <ul class="list-group list-group-flush">
+      {{#each tasks }}
+        <li class="list-group-item draggable" draggable="true">{{ this.name }}</li>
+      {{/each}}
+    </ul>
+  </div>
   <a class="btn btn-primary" href="/task" role="button">Add</a>
   <a class="btn btn-primary" href="#" role="button">Delete</a>
-  
 </div>
 
 
