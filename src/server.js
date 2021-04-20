@@ -31,6 +31,15 @@ app.get("/board/:id", async (req, res) => {
 
   res.render("board", { board, tasks });
 });
+app.get("/board/:id", async (req, res) => {
+  const board = await Board.findByPk(req.params.id);
+  const tasks = await board.getTasks({
+    attributes: ["status", "name"],
+    nest: true,
+  });
+  console.log(tasks);
+  res.render("board", { board, tasks });
+});
 
 //creating a new routes - task
 app.get("/task", async (req, res) => {
