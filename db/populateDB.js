@@ -21,6 +21,14 @@ async function populateDB() {
         const board = await Board.create({
             name: boardData.name,
         });
+
+        for (const userData of boardData.users) {
+            const user = await User.create({
+                name: userData.name,
+                avatar: userData.avatar
+            });
+
+
         for (const taskData of boardData.tasks) {
             const task = await Task.create({
                 name: taskData.name,
@@ -28,13 +36,9 @@ async function populateDB() {
                 status: taskData.status,
             });
             await board.addTask(task);
+            await task.setUser(user);
         }
-        for (const userData of boardData.users) {
-            const user = await User.create({
-                name: userData.name,
-                avatar: userData.avatar
-            });
-            await board.addUser([user]);
+
         }
 
     }

@@ -72,17 +72,7 @@ describe('Tests on the model', () => {
         expect(test_task.BoardId).toEqual(board.id)
     })
 
-    test("Can assign users to boards", async () => {
-        board = await Board.create({'name': 'The Simpsons'});
-        user = await User.create({
-            'name': "Lisa Simpson",
 
-        })
-        await board.addUser(user);
-        const user_boards = await user.getBoards();
-        const b1 = user_boards[0];
-        expect(b1.id).toEqual(board.id)
-    })
 
     test("Can assign users to tasks", async () => {
         board = await Board.create({'name': 'The Simpsons'});
@@ -96,14 +86,38 @@ describe('Tests on the model', () => {
             'name': "Maggie Simpson",
 
         })
-        await board.addUser(user);
-        const user_boards = await user.getBoards();
-        const b1 = user_boards[0];
-        expect(b1.id).toEqual(board.id)
 
-        await task.addUser(user);
-        const user_tasks = await user.getTasks();
-        const t1 = user_tasks[0];
-        expect(t1.id).toEqual(task.id)
+        //await user.addTask(task)
+        await task.setUser(user)
+        const test_user = await User.findByPk(user.id)
+        const test_task = await Task.findByPk(task.id)
+
+        expect(test_task.UserId).toEqual(test_user.id)
+    })
+
+    test("Can change tasks status", async () => {
+        board = await Board.create({'name': 'The Simpsons'});
+        task = await Task.create({
+            'name': "Learn to Play Tuba",
+            'description': 'and stop falling over',
+            'status': 'To Do'
+        })
+
+        await board.addTask(task);
+        user = await User.create({
+            'name': "Lisa Simpson",
+
+        })
+
+        //await user.addTask(task)
+        await task.setUser(user)
+        const test_user = await User.findByPk(user.id)
+        const test_task = await Task.findByPk(task.id)
+        expect(test_task.UserId).toEqual(test_user.id)
+        expect(test_task.status).toEqual('To Do')
+        await test_task.update({'status': 'Done'})
+        const test_task2 = await Task.findByPk(task.id)
+        expect(test_task2.status).toEqual('Done')
+
     })
 })
