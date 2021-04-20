@@ -94,4 +94,30 @@ describe('Tests on the model', () => {
 
         expect(test_task.UserId).toEqual(test_user.id)
     })
+
+    test("Can change tasks status", async () => {
+        board = await Board.create({'name': 'The Simpsons'});
+        task = await Task.create({
+            'name': "Learn to Play Tuba",
+            'description': 'and stop falling over',
+            'status': 'To Do'
+        })
+
+        await board.addTask(task);
+        user = await User.create({
+            'name': "Lisa Simpson",
+
+        })
+
+        //await user.addTask(task)
+        await task.setUser(user)
+        const test_user = await User.findByPk(user.id)
+        const test_task = await Task.findByPk(task.id)
+        expect(test_task.UserId).toEqual(test_user.id)
+        expect(test_task.status).toEqual('To Do')
+        await test_task.update({'status': 'Done'})
+        const test_task2 = await Task.findByPk(task.id)
+        expect(test_task2.status).toEqual('Done')
+
+    })
 })
