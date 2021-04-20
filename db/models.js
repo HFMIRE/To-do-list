@@ -37,13 +37,13 @@ User.init({
 Board.hasMany(Task, {as: 'tasks', foreignKey: 'BoardId'})
 Task.belongsTo(Board, {foreignKey: 'BoardId'})
 // Board to user relationship
-UserBoards = sequelize.define('UserBoards', {})
-Board.belongsToMany(User, {through: UserBoards});
-User.belongsToMany(Board, {through: UserBoards})
+//UserBoards = sequelize.define('UserBoards', {})
+//Board.belongsToMany(User, {through: UserBoards});
+//User.belongsToMany(Board, {through: UserBoards})
 // Task to user relationship
-UserTasks = sequelize.define('UserTasks', {})
-Task.belongsToMany(User, {through: UserTasks});
-User.belongsToMany(Task, {through: UserTasks})
+//UserTasks = sequelize.define('UserTasks', {})
+Task.belongsTo(User, {foreignKey:'UserId'})
+User.hasMany(Task, {as: 'tasks', foreignKey: 'UserId'})
 
 
 module.exports = {Board, Task, User};
