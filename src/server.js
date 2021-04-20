@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 4000;
+const port = 9000;
 const Handlebars = require("handlebars");
 const expressHandlebars = require("express-handlebars");
 const {
@@ -9,8 +9,8 @@ const {
 const handlebars = expressHandlebars({
   handlebars: allowInsecurePrototypeAccess(Handlebars),
 });
-const { Board, Task, User } = require("./models");
-const { sequelize, DataTypes, Model } = require("./db");
+const { Board, Task, User } = require("../db/models");
+const { sequelize, DataTypes, Model } = require("../db/db");
 const moment = require("moment");
 
 app.engine("handlebars", handlebars);
@@ -22,20 +22,21 @@ app.use(express.json());
 // connected to the all boards landing page
 app.get("/", async (req, res) => {
   const board = await Board.findAll({});
+  // if (board.length === 0) {
+  //   populateDB();
+  // }
   res.render("allboards", { board });
 });
 
 app.get("/board/:id", async (req, res) => {
-  const boardId = await Board.findByPk(req.params.id);
-  const board = await Board.findAll({
-    include: [{ model: Task, as: "tasks" }],
-    nest: true,
-  });
-  res.render("board", { board, boardId });
+  const board = await Board.findByPk(req.params.id);
+  const tasks = await board.getTasks();
+  console.log(tasks);
+  res.render("board", { board, tasks });
 });
 
 //creating a new routes - task
-app.get("/task", async (req, res) => {
+app.get("/task", (req, res) => {
   res.render("task");
 });
 app.listen(port, () => {
