@@ -9,8 +9,8 @@ const {
 const handlebars = expressHandlebars({
   handlebars: allowInsecurePrototypeAccess(Handlebars),
 });
-const { Board, Task, User } = require("./models");
-const { sequelize, DataTypes, Model } = require("./db");
+const { Board, Task, User } = require("../db/models");
+const { sequelize, DataTypes, Model } = require("../db/db");
 const moment = require("moment");
 
 app.engine("handlebars", handlebars);
