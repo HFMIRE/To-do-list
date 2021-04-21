@@ -1,15 +1,19 @@
 <div class="board">
-  {{#each tasks }}
-  <div class="card">
-    <div class="card-header">{{this.status}}</div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item draggable" draggable="true">{{ this.name }}</li>
+    {{#each board_list }}
+  <div class="card" id ="{{@key}}">
+        <div class="card-header">{{@key}}</div>
+        <ul class="list-group list-group-flush">
+      {{#each this }}
+        <li class="list-group-item draggable" draggable="true" id ="{{this.id}}">{{ this.name}}</li>
     </ul>
+      {{/each}}
   </div>
     {{/each}}
-  <a class="btn btn-primary" href="/task" role="button">Add</a>
-  <a class="btn btn-primary" href="#" role="button">Delete</a>
 </div>
+<br>
+<a class="btn btn-primary" href="/task" role="button">Add</a>
+<a class="btn btn-primary" href="#" role="button">Delete</a>
+
 
 
 
