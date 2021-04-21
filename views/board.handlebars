@@ -4,7 +4,9 @@
         <div class="card-header">{{@key}}</div>
         <ul class="list-group list-group-flush">
       {{#each this }}
+      <a  href="/edit/{{this.id}}">
         <li class="list-group-item draggable" draggable="true" id ="{{this.id}}">{{ this.name}}</li>
+        </a>
     </ul>
       {{/each}}
   </div>
