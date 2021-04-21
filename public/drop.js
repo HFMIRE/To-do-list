@@ -1,6 +1,8 @@
 const draggables = document.querySelectorAll('.draggable')
 const cards = document.querySelectorAll('.card')
 
+
+
 draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', () => {
         draggable.classList.add('dragging')
@@ -8,6 +10,19 @@ draggables.forEach(draggable => {
 
     draggable.addEventListener('dragend', () => {
         draggable.classList.remove('dragging')
+
+        const pcard = draggable.parentElement
+        console.log (draggable.textContent, draggable.id, pcard.id)
+        var xhr = new XMLHttpRequest();
+        yourUrl = '/taskstatusupdate'
+        xhr.open("POST", yourUrl, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+            id: draggable.id,
+            status: pcard.id
+        }));
+
+
     })
 })
 
