@@ -59,6 +59,7 @@ app.get("/board/:id", async (req, res) => {
   res.render("board", { board, tasks });
 });
 
+
 //creating a new routes - task
 app.get("/task", async (req, res) => {
   res.render("task");
@@ -70,6 +71,25 @@ app.post("/taskstatusupdate", async (req, res) => {
   await update_task.update({'status': req.body.status})
     }
 );
+
+
+app.post('/task', async (req, res) => {
+//    const errors = validationResult(req)
+//    if (!errors.isEmpty()) {
+//        return res.status(400).json({ errors: errors.array() })
+//    }
+  console.log(req)
+  const task = await Task.create({
+    name: req.body.name,
+    description: req.body.description,
+    status: 'To Do'
+  })
+  const board = await Board.findByPk(req.body.BoardId)
+  await board.addTask(task);
+  const rurl = '/board/'.concat(req.body.BoardId)
+  res.redirect(rurl);
+})
+
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
