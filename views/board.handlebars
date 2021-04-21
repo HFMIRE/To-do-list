@@ -2,22 +2,17 @@
     {{#each board_list }}
   <div class="card" id ="{{@key}}">
         <div class="card-header">{{@key}}</div>
-
         <ul class="list-group list-group-flush">
       {{#each this }}
         <li class="list-group-item draggable" draggable="true" id ="{{this.id}}">{{ this.name}}</li>
-
     </ul>
       {{/each}}
-
   </div>
     {{/each}}
 </div>
 <br>
 <a class="btn btn-primary" href="/task" role="button">Add</a>
 <a class="btn btn-primary" href="#" role="button">Delete</a>
-
-
 
 
 
