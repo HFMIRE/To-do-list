@@ -46,15 +46,6 @@ app.get("/board/:id", async (req, res) => {
   console.log(board_list);
   res.render("board", { board, board_list });
 });
-app.get("/board/:id", async (req, res) => {
-  const board = await Board.findByPk(req.params.id);
-  const tasks = await board.getTasks({
-    attributes: ["status", "name"],
-    nest: true,
-  });
-  console.log(tasks);
-  res.render("board", { board, tasks });
-});
 
 //creating a new routes - task
 app.get("/task", async (req, res) => {
@@ -91,12 +82,30 @@ app.get("/addprojects", async (req, res) => {
 
 app.post("/allboards", async (req, res) => {
   console.log(req.body.name);
-  await Board.create({ name: req.body.name });
+  const name = req.body;
+  await Board.create({ name });
   res.redirect("/");
 });
+
 app.get("/edit/:id", async (req, res) => {
   const task = await Task.findByPk(req.params.id);
   res.render("edit", { task });
+});
+
+app.get("/task/:id/delete", async (req, res) => {
+  const task = await Task.findByPk(req.params.id);
+  const boardId = task.BoardId;
+  task.destroy();
+  res.redirect(`/board/${boardId}`);
+});
+
+app.get("/board/:id/delete", (req, res) => {
+  // sort the board by id, then destroyes the content
+  Board.findByPk(req.params.id).then((board) => {
+    board.destroy();
+    // redirect to another url and show that page
+    res.redirect("/");
+  });
 });
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
