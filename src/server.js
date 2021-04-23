@@ -82,8 +82,7 @@ app.get("/addprojects", async (req, res) => {
 
 app.post("/allboards", async (req, res) => {
   console.log(req.body.name);
-  const name = req.body;
-  await Board.create({ name });
+  await Board.create({ name: req.body.name });
   res.redirect("/");
 });
 
