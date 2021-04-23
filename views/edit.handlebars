@@ -1,19 +1,21 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-     <form>
+     <form action=""/task/{{task.id}}/edit" method="POST"">
             <label>Title:
-              <input name="name" type="text" class="form-control" placeholder="Project Name">
+              <input name="name" type="text" class="form-control" value="{{task.name}}">
               </label><br> 
                 <label>Description:
-                    <input type="textarea" name="description" class="form-control" placeholder="Fix bugs with code">
+                    <input type="textarea" name="description" class="form-control" value="{{task.description}}">
                 </label><br>
                 <label >Assigned To:
-                     <input type="text" class="form-control" placeholder="Sam">
+                     <input type="text" class="form-control" placeholder="Who to assign to">
                 </label><br>
            <input type="submit" class="btn btn-primary" value="Submit">
-           <a class="btn btn-primary" id= "submitBtn" href="/task/{{task.id}}/delete" role="button">Delete</a>
+
      </form>
+
+        <a class="btn btn-primary" id= "submitBtn" href="/task/{{task.id}}/delete" role="button">Delete</a>
     </div>
   </div>
 </div>

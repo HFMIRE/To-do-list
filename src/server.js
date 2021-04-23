@@ -88,15 +88,28 @@ app.post("/allboards", async (req, res) => {
 
 app.get("/edit/:id", async (req, res) => {
   const task = await Task.findByPk(req.params.id);
+  const boardId = task.BoardId;
+  console.log(boardId)
   res.render("edit", { task });
 });
 
-app.get("/task/:id/delete", async (req, res) => {
+app.post('/edit/:id', async (req, res) => {
   const task = await Task.findByPk(req.params.id);
   const boardId = task.BoardId;
+  console.log(boardId)
+  await task.update(req.body)
+
+  res.redirect(`/board/${boardId}`)
+})
+
+
+app.get("/task/:id/delete", async (req, res) => {
+  const task = await Task.findByPk(req.params.id);
+  const boardId = task.Board;
   task.destroy();
   res.redirect(`/board/${boardId}`);
 });
+
 
 app.get("/board/:id/delete", (req, res) => {
   // sort the board by id, then destroyes the content
