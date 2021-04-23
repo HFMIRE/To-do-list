@@ -1,20 +1,21 @@
 <div class="board">
-    {{#each board_list }}
+  <div class="container">
+      {{#each board_list }}
   <div class="card" id ="{{@key}}">
         <div class="card-header">{{@key}}</div>
         <ul class="list-group list-group-flush">
       {{#each this }}
-      <a  href="/edit/{{this.id}}">
+     <a id="editLine"  href="/edit/{{this.id}}"></a>
         <li class="list-group-item draggable" draggable="true" id ="{{this.id}}">{{ this.name}}</li>
         </a>
     </ul>
       {{/each}}
   </div>
     {{/each}}
-    <a class="btn btn-primary" href="/task?board={{board.id}}" role="button">Add</a>
-    <a class="btn btn-primary" href='/board/{{board.id}}/delete' role="button">Delete</a>
+    <a class="btn btn-success" href="/task?board={{board.id}}" role="button">Add</a>
+    <a class="btn btn-success" href='/board/{{board.id}}/delete' role="button">Delete</a>
 </div>
-
+  </div>
 
 
 

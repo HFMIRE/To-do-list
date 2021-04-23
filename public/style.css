@@ -6,22 +6,74 @@
 
 .card-header {
   text-align: center;
-  text-decoration: underline;
+
   font-weight: bold;
 }
 
 .card {
   margin: 10px;
   width: 18rem;
+  background-color: #379683;
 }
 
 body {
-  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+#BoardsTitle {
+  font-family: "Rubik", sans-serif;
+  color: #05386b;
+  font-weight: 500;
+  margin: 10px;
+  text-align: center;
+}
+
+h1 {
+  color: #05386b;
+}
+
+.container {
+  background-color: #ffff;
+  flex: content;
+  width: 300px;
+  height: 900px;
+  box-sizing: border-box;
+}
+
+#form {
+  margin: 10px;
+}
+
+.boardTitle {
+  border: solid;
+  border-color: #379683;
+  border-radius: 25px;
+  border-style: inset;
+  background-color: #ffff;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 3px 5px #5cdb9542;
+}
+
+#boardLine {
+  text-decoration: none;
+}
+
+#editLine {
+  text-decoration: none;
+}
+
+h2 {
+  text-decoration: none;
 }
 
 .btn {
   margin: 10px;
   height: fit-content;
+  color: black;
+  align-items: center;
 }
 .contain {
   position: relative;

@@ -13,17 +13,17 @@ describe("to-do list test", () => {
     //arrange
     cy.visit("http://localhost:4000");
     //act
-    cy.contains("First Board").click();
+    cy.contains("Coding project").click();
   });
   // having a link that allows to go back to the all boards
   it("add task", () => {
     //arrange
-    cy.visit("http://localhost:4000/board/1");
+    cy.visit("http://localhost:4000/board/26");
     //act
     cy.contains("Add").click();
   });
   it("filling information to add task", () => {
-    cy.visit("http://localhost:4000/task?board=1");
+    cy.visit("http://localhost:4000/task?board=26");
     cy.get('input[name="name"').type("Third Task ");
     cy.get('input[ name="description" ').type("Fruits");
     cy.get("form").submit();
@@ -31,6 +31,6 @@ describe("to-do list test", () => {
   // this part should also check if it is possible to update task
   it("check if it possible to delete task", () => {
     cy.contains("Third Task").click();
-    cy.get("#submitBtn").click();
+    cy.contains("Delete").click();
   });
 });
