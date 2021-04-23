@@ -1,15 +1,19 @@
  
-<h1>All Boards</h1>
-<section>
+<h1 id="BoardsTitle">All Boards</h1>
+<div class="container">
+    <section>
     {{#each board}}
         <article>
             <header></header>
-             <a href="/board/{{this.id}}">
-            <h1>{{this.name}}</h1>
+             <a id="boardLine" href="/board/{{this.id}}">
+             <div class="boardTitle">
+                 <h1>{{this.name}}</h1>
+             </div>
             </a>
            <h4>{{this.createdAt}}</h4>
             <h4>{{this.updatedAt}}</h4>
         </article>
     {{/each}}
     <a class="btn btn-primary" href="/addprojects" role="button">Add Projects</a>
-</section>
+    </section>
+</div>
