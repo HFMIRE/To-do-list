@@ -6,7 +6,7 @@ describe("to-do list test", () => {
   it("add a new board", () => {
     cy.visit("http://localhost:4000");
     cy.contains("Add Projects").click();
-    cy.get('input[name="name"').type("Coding project ").should("be.visible");
+    cy.get('input[name="name"').type("Coding project ");
     cy.get("form").submit();
   });
   it("opens the First board page", () => {
@@ -24,8 +24,8 @@ describe("to-do list test", () => {
   });
   it("filling information to add task", () => {
     cy.visit("http://localhost:4000/task?board=1");
-    cy.get('input[name="name"').type("Third Task ").should("be.visible");
-    cy.get('input[ name="description" ').type("Fruits").should("be.visible");
+    cy.get('input[name="name"').type("Third Task ");
+    cy.get('input[ name="description" ').type("Fruits");
     cy.get("form").submit();
   });
   // this part should also check if it is possible to update task
